@@ -1,13 +1,10 @@
-angular.module('apiApp').service('swSvc', function($q, $http){
-  var baseUrl = 'http://swapi.co/api';
-  this.getStarships = function() {
-    var later = $q.defer();
-    $http ({
+angular.module('apiApp').service('mainService', function($http){
+  this.getPlayers = function() {
+    return $http ({
       method: "GET",
-      url: baseUrl + '/starships/'
+      url: 'http://swapi.co/api/people/'
     }).then(function(response){
-      later.resolve(response.data)
+      return response.data.results
     })
-    return later.promise;
   }
-})
+});

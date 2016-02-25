@@ -1,8 +1,9 @@
 <html ng-app="apiApp">
-	<body ng-controller="swctrl">
-		{{starships}}
-
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<body ng-controller='mainCtrl'>
+		<div ng-repeat="people in people">
+			{{people.name}} {{people.eye_color}}
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>

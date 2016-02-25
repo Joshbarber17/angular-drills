@@ -1,7 +1,8 @@
-angular.module('apiApp').controller('swctrl', function($scope, swSvc){
-  var promise = swSvc.getStarships()
-  promise.then(function(starships){
-    $scope.starships = starships;
-  })
-
+angular.module('apiApp').controller('mainCtrl', function($scope, mainService){
+  $scope.players = function() {
+    mainService.getPlayers().then(function(results){
+      $scope.people = results
+    })
+  }
+  $scope.players();
 })
