@@ -1,10 +1,11 @@
-<html ng-app="arrayApp">
+<!doctype html>
+<html ng-app="arrApp">
 	<head>
 		<link rel="stylesheet" href="style.css"></link>
 	</head>
-	<body ng-controller="arrayController">
-		<div ng-repeat='person in data'>
-			{{person.name}} - ({{person.email}})
+	<body ng-controller="arrController">
+		<div ng-repeat="person in showData()">
+			<strong>Name: </strong>{{person.name}} <strong>Email: </strong>{{person.email}}
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
