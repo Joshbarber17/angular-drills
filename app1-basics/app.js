@@ -1,1 +1,1 @@
-<p>
+angular.module('myApp', [])
