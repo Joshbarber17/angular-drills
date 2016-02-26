@@ -1,9 +1,15 @@
-<html>
+<!doctype html>
+<html ng-app='signUp'>
 	<body>
-		<h1>app6 - routing</h1>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<ui-view>
+		</ui-view>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
 		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
+		<script src="controllers/mainCtrl.js"></script>
+		<script src="services/mainService.js"></script>
+		<script src="controllers/homeCtrl.js"></script>
+		<script src='controllers/signupCtrl.js'></script>
+		<script src='controllers/detailsCtrl.js'></script>
 	</body>
 </html>
